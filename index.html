@@ -1,192 +1,133 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Modelagem Matemática e Programação: O Uso de Algoritmos na Inovação Tecnológica</title>
-<link rel="stylesheet" href="style.css">
-<script src="main.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelagem Matemática e Programação | Guia do Trabalho e Simulação</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
 </head>
 <body>
 
-<h1>Modelagem Matemática e Programação:<br>O Uso de Algoritmos na Inovação Tecnológica</h1>
-<p class="subtitle">Simulação de Reação em Cadeia — Progressão Geométrica aplicada em JavaScript</p>
+    <header class="hero">
+        <div class="container">
+            <span class="badge">Documentação &bull; Matemática II &bull; Alura</span>
+            <h1>Modelagem Matemática e Programação</h1>
+            <p>O Uso de Algoritmos na Inovação Tecnológica: Guia Teórico, Estrutura e Aplicação Prática</p>
+        </div>
+    </header>
 
-<h2>1. Introdução</h2>
-<p>
-A matemática é, historicamente, a linguagem que permite descrever e prever fenômenos do mundo real.
-Com o avanço da computação, essa linguagem ganhou um novo tradutor: a programação. Hoje, conceitos
-como progressões, matrizes, geometria analítica e estatística deixaram de existir apenas no papel e
-passaram a rodar em servidores, aplicativos e algoritmos que sustentam a inteligência artificial, a
-criptografia e a análise de grandes volumes de dados (Big Data).
-</p>
-<p>
-Este trabalho tem como objetivo demonstrar, na prática, como um conceito matemático de crescimento
-exponencial pode ser traduzido em um algoritmo funcional. Para isso, será desenvolvida uma simulação
-computacional de <strong>reação em cadeia</strong>, modelo matemático amplamente utilizado não apenas
-em física, mas também em áreas como epidemiologia (espalhamento de doenças), marketing viral e
-crescimento populacional — mostrando como uma mesma estrutura matemática pode ser reaproveitada em
-contextos completamente diferentes.
-</p>
+    <main class="container">
+        <!-- SEÇÃO 1: INTRODUÇÃO DO TRABALHO -->
+        <section class="card">
+            <h2>1. Introdução do Trabalho</h2>
+            <p class="lead">A era digital moderna é sustentada por uma base invisível, porém robusta: a união entre a matemática e a programação.</p>
+            <div class="grid-2">
+                <div>
+                    <h3>Contextualização</h3>
+                    <p>Conceitos abstratos como cálculo, estatística, progressões e equações diferenciais deixaram de ser apenas teorias acadêmicas para se tornarem o motor de inovações como inteligência artificial, criptografia e modelagem de sistemas dinâmicos.</p>
+                </div>
+                <div>
+                    <h3>Objetivo</h3>
+                    <p>Demonstrar a aplicação prática de conceitos de Matemática II por meio de um algoritmo desenvolvido em JavaScript, resolvendo um problema de simulação de sistemas complexos (como o modelo de propagação exponencial estocástica).</p>
+                </div>
+            </div>
+        </section>
 
-<h2>2. Fundamentação Teórica</h2>
-<h3>2.1 A Matemática como Linguagem da Inovação</h3>
-<p>
-Todo algoritmo é, no fundo, uma sequência de operações matemáticas organizadas em uma lógica de
-repetição e decisão. No caso deste trabalho, o conceito central é a <strong>progressão geométrica (PG)</strong>:
-uma sequência em que cada termo é obtido multiplicando o anterior por uma razão fixa. Quando aplicamos
-uma taxa de probabilidade a cada "elemento ativo" de um sistema, obtemos uma variação probabilística
-da PG — o crescimento deixa de ser fixo e passa a depender de sorteios aleatórios, o que aproxima o
-modelo de fenômenos reais (nem todo contato gera contágio, nem toda reação se propaga).
-</p>
-<h3>2.2 O Papel da Programação</h3>
-<p>
-A programação entra como ferramenta de automação: em vez de calcular manualmente centenas de
-gerações de uma sequência, o computador executa milhares de iterações em milissegundos, permitindo
-testar diferentes cenários (taxas de ativação, número de gerações, condições de parada) e observar
-como pequenas mudanças nos parâmetros iniciais alteram drasticamente o resultado final — um exemplo
-prático de <em>sensibilidade às condições iniciais</em>.
-</p>
+        <!-- SEÇÃO 2: EXPLICAÇÃO DE COMO O SITE FOI FEITO -->
+        <section class="card">
+            <h2>2. Explicação da Atividade: Como o Site Foi Desenvolvido</h2>
+            <p>Para transformar a proposta teórica em um projeto funcional, interativo e visualmente moderno, a atividade foi estruturada utilizando os padrões fundamentais da web separados em dois arquivos principais:</p>
 
-<h2>3. Proposta de Aplicação Prática: Simulação de Reação em Cadeia</h2>
-<p>
-<strong>Conceito matemático:</strong> progressão geométrica probabilística (equação de diferenças discretas).<br>
-<strong>Inovação e tecnologia:</strong> o mesmo modelo usado aqui serve de base para simuladores de
-propagação de epidemias, análise de viralização de conteúdo em redes sociais e estudos de reações em
-cadeia na física nuclear — mostrando a versatilidade de um único algoritmo matemático.
-</p>
-<p>
-A cada geração, cada elemento "ativo" tem uma probabilidade <code>p</code> de ativar <code>n</code>
-novos elementos. O número total de elementos ativos por geração segue, em média, a equação:
-</p>
-<pre>ativos(g) ≈ ativos(g-1) × (n × p)</pre>
-<p>onde <code>n × p</code> é o "fator de multiplicação médio" do sistema.</p>
+            <div class="theory-grid" style="margin-top: 1.5rem;">
+                <div class="theory-item">
+                    <div class="theory-icon">📄</div>
+                    <h4>O Arquivo `index.html`</h4>
+                    <p>Atua como o esqueleto e a semântica da página. Ele organiza o conteúdo textual em blocos lógicos (`<header>`, `<main>`, `<section>`) e estrutura o painel interativo com inputs numéricos e botões de disparo.</p>
+                </div>
+                <div class="theory-item">
+                    <div class="theory-icon">🎨</div>
+                    <h4>O Arquivo `style.css`</h4>
+                    <p>Controla toda a identidade visual, tipografia e responsividade. Utiliza variáveis globais, flexbox/grid e efeitos de transição para garantir uma experiência limpa, moderna e adaptável a qualquer tela.</p>
+                </div>
+            </div>
 
-<h2>4. Metodologia e Desenvolvimento do Código</h2>
-<p>O código abaixo foi construído em três partes:</p>
-<ol>
-  <li>Uma função que simula a ativação de um elemento (sorteio de probabilidade);</li>
-  <li>Um laço de repetição que avança geração por geração, aplicando a função anterior a cada elemento ativo;</li>
-  <li>Uma coleta de dados (array) que guarda o total de ativos por geração, para depois gerar o gráfico/tabela.</li>
-</ol>
+            <div class="info-box" style="margin-top: 2rem;">
+                <h4>Arquitetura Lógica (JavaScript Embutido):</h4>
+                <p>O script captura parâmetros de entrada do usuário, processa equações de progressão geométrica estocástica utilizando laços de repetição (`for`) e manipula o DOM para exibir os resultados da simulação em tempo real.</p>
+            </div>
+        </section>
 
-<pre><span class="comment">// ==== SIMULAÇÃO DE REAÇÃO EM CADEIA ====
-// Cada elemento ativo tem chance "probabilidade" de ativar "novosPorAtivacao" elementos</span>
+        <!-- SEÇÃO 3: LABORATÓRIO PRÁTICO -->
+        <section class="card">
+            <h2>3. Laboratório Prático de Simulação</h2>
+            <p>Teste o algoritmo desenvolvido para este trabalho diretamente no navegador:</p>
+            
+            <div class="interactive-panel">
+                <div class="controls-grid">
+                    <div class="control-group">
+                        <label for="nucleos">Núcleos Iniciais:</label>
+                        <input type="number" id="nucleos" value="5" min="1" max="50">
+                    </div>
+                    <div class="control-group">
+                        <label for="taxa">Taxa de Reação (Média):</label>
+                        <input type="number" id="taxa" value="2.2" step="0.1" min="1.0" max="5.0">
+                    </div>
+                    <div class="control-group">
+                        <label for="geracoesInput">Total de Gerações:</label>
+                        <input type="number" id="geracoesInput" value="8" min="3" max="15">
+                    </div>
+                </div>
 
-<span class="keyword">function</span> simularReacaoEmCadeia(elementosIniciais, probabilidade, novosPorAtivacao, geracoes) {
-  <span class="keyword">let</span> ativos = elementosIniciais;
-  <span class="keyword">const</span> historico = [ativos]; <span class="comment">// guarda o total de ativos em cada geração</span>
+                <button id="btn-simular" class="btn-primary">Executar Simulação Computacional</button>
 
-  <span class="keyword">for</span> (<span class="keyword">let</span> g = 0; g < geracoes; g++) {
-    <span class="keyword">let</span> novosAtivados = 0;
+                <div id="resultado-container" class="result-box hidden">
+                    <h4>Resultados da Simulação:</h4>
+                    <div id="resultado-texto"></div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <span class="comment">// cada elemento ativo "tenta" ativar novos elementos</span>
-    <span class="keyword">for</span> (<span class="keyword">let</span> i = 0; i < ativos; i++) {
-      <span class="keyword">for</span> (<span class="keyword">let</span> j = 0; j < novosPorAtivacao; j++) {
-        <span class="keyword">if</span> (Math.random() < probabilidade) {
-          novosAtivados++;
-        }
-      }
-    }
+    <footer>
+        <div class="container">
+            <p>Trabalho Acadêmico de Matemática II &bull; Documentação e Aplicação Web</p>
+        </div>
+    </footer>
 
-    ativos = novosAtivados;
-    historico.push(ativos);
+    <script>
+        document.getElementById('btn-simular').addEventListener('click', function() {
+            const nucleosIniciais = parseInt(document.getElementById('nucleos').value) || 5;
+            const taxaReacao = parseFloat(document.getElementById('taxa').value) || 2.2;
+            const geracoes = parseInt(document.getElementById('geracoesInput').value) || 8;
 
-    <span class="comment">// condição de parada: se ninguém mais ativa, a reação "morre"</span>
-    <span class="keyword">if</span> (ativos === 0) <span class="keyword">break</span>;
-  }
+            let ativoAtual = nucleosIniciais;
+            let htmlOutput = `<p><strong>Estado Inicial:</strong> ${nucleosIniciais} elementos ativos.</p><ul>`;
 
-  <span class="keyword">return</span> historico;
-}</pre>
+            let explosao = false;
+            for (let i = 1; i <= geracoes; i++) {
+                let fatorAleatorio = 0.5 + (Math.random() * 1.0);
+                let novosAtivos = Math.floor(ativoAtual * taxaReacao * fatorAleatorio);
+                ativoAtual += novosAtivos;
 
-<p><strong>Função complementar 1 — taxa média de crescimento entre gerações:</strong></p>
-<pre><span class="comment">// Calcula, em média, por quanto o número de ativos foi multiplicado
-// a cada geração (razão média da progressão geométrica observada)</span>
-<span class="keyword">function</span> taxaMediaDeCrescimento(historico) {
-  <span class="keyword">let</span> somaRazoes = 0;
-  <span class="keyword">let</span> contagem = 0;
+                htmlOutput += `<li><strong>Geração ${i}:</strong> +${novosAtivos} novos ativados &rarr; <strong>Total acumulado: ${ativoAtual.toLocaleString('pt-BR')}</strong></li>`;
 
-  <span class="keyword">for</span> (<span class="keyword">let</span> i = 1; i < historico.length; i++) {
-    <span class="keyword">if</span> (historico[i - 1] > 0) { <span class="comment">// evita divisão por zero</span>
-      somaRazoes += historico[i] / historico[i - 1];
-      contagem++;
-    }
-  }
+                if (ativoAtual > 1000000) {
+                    htmlOutput += `</ul><p class="alert-text">⚠️ <strong>Alerta Crítico:</strong> Limite de reação exponencial massiva atingido na geração ${i}!</p>`;
+                    explosao = true;
+                    break;
+                }
+            }
 
-  <span class="keyword">return</span> contagem > 0 ? somaRazoes / contagem : 0;
-}</pre>
+            if (!explosao) {
+                htmlOutput += `</ul><p class="success-text">✅ Simulação concluída com estabilidade controlada ao final de ${geracoes} gerações.</p>`;
+            }
 
-<p><strong>Função complementar 2 — reação com limite de recursos finitos:</strong></p>
-<pre><span class="comment">// Versão da simulação com um teto máximo de elementos (ex: população total,
-// estoque de material físsil, número de usuários possíveis de uma rede)</span>
-<span class="keyword">function</span> simularReacaoComLimite(elementosIniciais, probabilidade, novosPorAtivacao, geracoes, limiteMaximo) {
-  <span class="keyword">let</span> ativos = elementosIniciais;
-  <span class="keyword">const</span> historico = [ativos];
-
-  <span class="keyword">for</span> (<span class="keyword">let</span> g = 0; g < geracoes; g++) {
-    <span class="keyword">let</span> novosAtivados = 0;
-
-    <span class="keyword">for</span> (<span class="keyword">let</span> i = 0; i < ativos; i++) {
-      <span class="keyword">for</span> (<span class="keyword">let</span> j = 0; j < novosPorAtivacao; j++) {
-        <span class="keyword">if</span> (Math.random() < probabilidade) {
-          novosAtivados++;
-        }
-      }
-    }
-
-    <span class="comment">// trava no limite máximo de recursos disponíveis</span>
-    ativos = Math.min(novosAtivados, limiteMaximo);
-    historico.push(ativos);
-
-    <span class="keyword">if</span> (ativos === 0 || ativos >= limiteMaximo) <span class="keyword">break</span>;
-  }
-
-  <span class="keyword">return</span> historico;
-}</pre>
-
-<h3>Demonstração ao vivo</h3>
-<p>Ajuste os parâmetros e rode a simulação diretamente aqui na página:</p>
-<div class="demo-box">
-  <label>Elementos iniciais: <input id="inicial" type="number" value="1"></label><br><br>
-  <label>Probabilidade de ativação (0 a 1): <input id="prob" type="number" step="0.01" value="0.55"></label><br><br>
-  <label>Novos por ativação: <input id="novos" type="number" value="2"></label><br><br>
-  <label>Número de gerações: <input id="geracoes" type="number" value="10"></label><br><br>
-  <button onclick="rodarDemo()">▶ Rodar simulação</button>
-  <div id="output"></div>
-</div>
-
-<h2>5. Considerações Finais</h2>
-<p>
-Ao rodar a simulação diversas vezes com diferentes valores de probabilidade, fica evidente que o
-comportamento do sistema não é gradual — ele muda de forma abrupta em torno de um valor específico.
-Quando a probabilidade multiplicada pelo número de novos elementos por ativação (<code>p × n</code>)
-é menor que 1, a reação tende a se extinguir rapidamente, já que cada geração produz, em média, menos
-elementos ativos que a anterior. Quando esse produto ultrapassa 1, o sistema entra em crescimento
-exponencial descontrolado, mesmo que a diferença nos parâmetros iniciais seja pequena. Esse ponto de
-transição é conhecido, em contextos físicos, como <em>massa crítica</em>, mas o mesmo princípio
-matemático aparece em qualquer fenômeno de propagação: para um vírus se espalhar em uma população, o
-número básico de reprodução (<code>R0</code>) precisa ser maior que 1; para um conteúdo "viralizar"
-nas redes sociais, cada pessoa que vê o post precisa, em média, compartilhá-lo com mais de uma outra
-pessoa.
-</p>
-<p>
-Isso mostra a versatilidade da modelagem matemática como ferramenta de inovação: o mesmo algoritmo de
-progressão geométrica probabilística construído aqui poderia, com pequenos ajustes de contexto, ser
-reaproveitado por uma equipe de saúde pública simulando a propagação de uma doença, por uma empresa de
-marketing avaliando o potencial de viralização de uma campanha, ou por um analista de dados projetando
-o crescimento da base de usuários de um aplicativo. A programação não cria o conceito matemático — ela
-o transforma em uma ferramenta de simulação e previsão, permitindo testar cenários que seriam
-inviáveis de calcular manualmente.
-</p>
-<p>
-A maior dificuldade na implementação foi justamente traduzir um conceito determinístico (a fórmula da
-progressão geométrica) para um modelo probabilístico: em vez de multiplicar diretamente por uma razão
-fixa, foi necessário simular, elemento por elemento, um "sorteio" de ativação usando <code>Math.random()</code>,
-o que aproxima o algoritmo do comportamento real — imprevisível no detalhe, mas previsível na
-tendência geral quando observado em larga escala. Esse é, talvez, o maior aprendizado do trabalho: a
-matemática oferece a estrutura teórica, mas é a computação que permite observar como o acaso e a
-probabilidade moldam o resultado final de um sistema complexo.
-</p>
-
-
+            const container = document.getElementById('resultado-container');
+            const textoDiv = document.getElementById('resultado-texto');
+            textoDiv.innerHTML = htmlOutput;
+            container.classList.remove('hidden');
+        });
+    </script>
 </body>
 </html>
