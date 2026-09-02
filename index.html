@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>Modelagem Matemática e Programação: O Uso de Algoritmos na Inovação Tecnológica</title>
 <link rel="stylesheet" href="style.css">
+<script src="main.js"></script>
 </head>
 <body>
 
@@ -186,34 +187,6 @@ matemática oferece a estrutura teórica, mas é a computação que permite obse
 probabilidade moldam o resultado final de um sistema complexo.
 </p>
 
-<script>
-function simularReacaoEmCadeia(elementosIniciais, probabilidade, novosPorAtivacao, geracoes) {
-  let ativos = elementosIniciais;
-  const historico = [ativos];
-  for (let g = 0; g < geracoes; g++) {
-    let novosAtivados = 0;
-    for (let i = 0; i < ativos; i++) {
-      for (let j = 0; j < novosPorAtivacao; j++) {
-        if (Math.random() < probabilidade) novosAtivados++;
-      }
-    }
-    ativos = novosAtivados;
-    historico.push(ativos);
-    if (ativos === 0) break;
-  }
-  return historico;
-}
-
-function rodarDemo() {
-  const inicial = parseInt(document.getElementById('inicial').value);
-  const prob = parseFloat(document.getElementById('prob').value);
-  const novos = parseInt(document.getElementById('novos').value);
-  const geracoes = parseInt(document.getElementById('geracoes').value);
-  const historico = simularReacaoEmCadeia(inicial, prob, novos, geracoes);
-  document.getElementById('output').textContent =
-    'Ativos por geração:\n' + historico.map((v, i) => `Geração ${i}: ${v}`).join('\n');
-}
-</script>
 
 </body>
 </html>
